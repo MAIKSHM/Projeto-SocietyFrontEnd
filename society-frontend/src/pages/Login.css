@@ -1,0 +1,151 @@
+/* Fundo estilo grama com listras */
+.login-container {
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      #065c34,
+      #065c34 40px,
+      #0a703e 40px,
+      #0a703e 80px
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Linha do meio campo */
+  .mid-line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Grandes áreas */
+  .penalty-box {
+    position: absolute;
+    width: 220px;
+    height: 320px;
+    border: 2px solid white;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .penalty-box.left {
+    left: 0;
+    border-left: none;
+  }
+
+  .penalty-box.right {
+    right: 0;
+    border-right: none;
+  }
+  
+  /* Pequenas áreas (goleiras) */
+  .goal-box {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    border: 2px solid white;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .goal-box.left {
+    left: 0;
+    border-left: none;
+  }
+
+  .goal-box.right {
+    right: 0;
+    border-right: none;
+  }
+  
+  .login-form {
+    background: rgba(0, 0, 0, 0.8);
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    position: relative;
+    border: 3px solid #1db954;
+  }
+  
+  .login-form h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: #13533a;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #1db954;
+    transition: 0.3s;
+  }
+  
+  .login-form input:focus {
+  box-shadow: 0 0 10px #1db954;
+  background-color: #0e3d2c;
+}
+  
+  
+  .login-form input::placeholder {
+    color: #c1f7d5;
+  }
+  
+  .login-form button {
+    background: linear-gradient(135deg, #1db954, #32ff7e);
+    color: black;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .login-form button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px #1db954;
+  }
+  
+  
+  /* Mensagem de erro ou sucesso */
+  .mensagem {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 400px) {
+    .login-form {
+      width: 90vw;
+      height: 90vw;
+      border-radius: 50%;
+      padding: 30px 20px;
+    }
+  }
+  
+  
