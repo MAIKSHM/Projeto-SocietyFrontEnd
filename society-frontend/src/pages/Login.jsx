@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // import do hook
 import axios from "axios";
-import './Login.css';
+import '../styles/Login.css';
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mensagem, setMensagem] = useState("");
+  const navigate = useNavigate(); // inicialização do hook
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -16,9 +18,9 @@ export default function Login() {
         senha,
       });
 
-      const token = response.data.token;
-      localStorage.setItem("token", token);
+      // Se deu certo, redireciona para o dashboard
       setMensagem("Login realizado com sucesso!");
+      navigate("/dashboard");
     } catch (error) {
       console.error("Erro ao fazer login:", error);
       setMensagem("Erro ao fazer login. Verifique suas credenciais.");
